@@ -1,0 +1,125 @@
+server:
+  port: 11000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://register-center-1:30000/eureka/,http://register-center-2:30001/eureka/
+spring:
+  application:
+    name: entrance-guard-core
+  main:
+    allow-bean-definition-overriding: true
+  output:
+    ansi:
+      enabled: DETECT
+  servlet:
+    multipart:
+      max-file-size: 4MB
+      max-request-size: 20MB
+
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/entranceguard?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+#    url: jdbc:mysql://49.235.35.76:3306/entranceguard?characterEncoding=utf-8
+    username: root
+    password: root1995 # 使用druid数据源
+    #type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+#datasource config
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://49.235.35.76:3306/blog?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8
+  username: root
+  password: 123456
+
+# 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+#  mapper-locations: classpath:mapping/*.xml #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.linktop.cloud.entranceguardcore.dao # 注意：对应实体类的路径
+  configuration:
+    logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#文件
+cbs:
+    filePath:
+        file:./data/cloud/
+
+logging:
+  file: ./logs/core.log
+  file.max-size: 100MB
+  pattern:
+    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+  level:
+    root: ERROR
+    org:
+      springframework:
+        security: DEBUG
+        web: ERROR
+        hibernate: DEBUG
+      apache:
+        commons:
+          dbcp2: DEBUG
+    com:
+      linktop: INFO
+
+app:
+  key: "900092b2314d41a0b9a8c5b8ed706490"
+  rsa_private_key_pkcs8: |
+                   MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDby/UpfMZm+rJ
+                   SiJAaX9vArXWTPBv9F/dvwEL+IUvZhWWocOfKWlxH7q9Il0b9SBFe1otOtp0pyrJ
+                   +NP/HkYQ+ZaalO0/OaIo7ld30Sax2VNCUObxA5cOyTRP1GfIaZCmpSVf4uWUe805
+                   Ylcx9+xwGgO/lkAPvAFi85uJs+ygYX6RkgzOYp4x0X7/0As3exTB8XNzjclsDAwl
+                   PwCTJKxw5wnUNA4jY+cKzpRLpcvC817NDhgVnr6LMhOPSxOQGurMwMwi5I7MLLZw
+                   6Cc/wmAhNiMh0uLYgurtTNi93msY2GeF3eM648Ks97WjrHD8MvJDBQ06UId/SUbb
+                   DZ2apX3TAgMBAAECggEABAXU4TatQ1ivQ4dwHw1M3zcaERgyVsub8Y+N8PYjn68l
+                   QJ2BzlPm5Lo3eM8tRXcNPADnAUlV19LdEZ06l+TConTQwcvQ+l0wVlFZoZC/kCee
+                   DB5oMovVXyuLFR2VKU3q+VMq6sdb3GuT9NtuWgv1ZPVUIGxyUyCWkrfa+sGmXEK8
+                   Pmr9nEl4Dp0qAKqS1q1cZpEsI5+bsNW2k3wCx7Zbj95Mm0tz2ZWrhyNO3zGrhjAb
+                   nrhJ/m6kbDCFhog5p0U+7rPCknk3kmg6C3kUMjLz095bXoWKR8zenz7iVY8a3Ere
+                   XR9a0r0EuU/0BcjK5LY9rDiqnNy15BxG9ADqOZStYQKBgQD0ov/YyJh3Zjetd7/P
+                   eYdoPHkB8DVCO9xVhKkuJ9jQXao5jyB7nM9AGvha1X5wGR8WLpcHc9M48bNDR03v
+                   q3Rqzjzf2R2GsdoEv2PiKsEa9I70+guIZtYyYwI2WWuTC735zSUzhFEY1LQQmTXP
+                   Bvg5t1nOdk43X8KOUeiDe5t28QKBgQDMgx3eYjFSPKlz0TSSzIa7JbexUIkMs89s
+                   ApXFkTlmX+5ZK9NnD6+T/wyvyGlDBS2zrpziMPNmsu9mwj+GSjJSdY9B1IobV0cI
+                   SR6dpuj5fXXLf3hBtZV9HskZ3Q8ijjLI0B3YHdaDcsxny36qBbbB8kUuJ8ROEdS0
+                   TriCly6pAwKBgQDbPwZK1CSIxaxao/rcx88KJUBR82TX8mwanKU+/2k5/OflZBe5
+                   kSTREBrK1ZHWhz0sFR84B58i5sNBJbN8e83/Nsyp1Zy3rcd1/81V0fl03f8NINeb
+                   LIcFa2R9LxDRHXHqYefYTtqbhW3HfngSDe4DVAaBmdepmwHzqQbYZ7xCEQKBgE5D
+                   fxKzkRxfipl/3havnn/QF1QL9eaeiSpUcuyAfu7ml1gYpXYzUoXYfQpoL6AuQycY
+                   E4GcKgmLQIKao6TIkCluQ7x1kcSUyeIp2UWLsmyHzqRpy6OZ0fNn7J2xMzGOKXEf
+                   88vY31a+f+rYvUhjl2TxSfg3z6/wsu2tkn6nTHvxAoGBAJ5T9wdQqSYdUcTSMAv6
+                   owVv7mcyhJ0CkWlLfb1/vYd/SfsgZlk0tVYRlpn0iWjin4KABVHKG6zGk683+o89
+                   poz5Kn0YYImFFZI99JWMRYSRJ+cg7ROOqU0txWqymIvsxpRB8Jb0ufkBmy2YE5Ts
+                   uzSnkT7TRMPJICxZt4ViR2qZ
+longconn:
+  secret: "\"Nz0_Xw4F{U-qhb|"
+  secretB64: "Ik56MF9YdzRGe1UtcWhifA=="
+  host: "218.5.96.6"
+  port: 9787
+
+#添加的
+ribbon:
+  eureka:
+    enabled: true
+
+#feign：
+#  hystrix：
+#    enabled：true
+
+
+

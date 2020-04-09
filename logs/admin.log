@@ -1,0 +1,102 @@
+2020/04/09-09:13 [main] INFO  com.linktop.cloud.entranceguardadmin.EntranceGuardAdminApplication- No active profile set, falling back to default profiles: default
+2020/04/09-09:13 [main] INFO  org.springframework.cloud.context.scope.GenericScope- BeanFactory id=33ed9ef5-e36d-3079-9faf-23dad3de0984
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.AccountClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.AesClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.BlacklistFaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.BlacklistICCardClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.BusiServerApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.DevUlClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.DeviceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.DeviceConfigClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.DoorTypeClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.FaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.GateEventClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.ICCardClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.LoginClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.linktop.cloud.entranceguardclient.feignclient.UsersClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$874a8836] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/04/09-09:13 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 10000 (http)
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.AprLifecycleListener- An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.AprLifecycleListener- Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.AprLifecycleListener- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.AprLifecycleListener- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.AprLifecycleListener- OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2020/04/09-09:13 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/04/09-09:13 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2408 ms
+2020/04/09-09:13 [main] WARN  com.netflix.config.sources.URLConfigurationSource- No URLs will be polled as dynamic configuration sources.
+2020/04/09-09:13 [main] INFO  com.netflix.config.sources.URLConfigurationSource- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020/04/09-09:13 [main] WARN  com.netflix.config.sources.URLConfigurationSource- No URLs will be polled as dynamic configuration sources.
+2020/04/09-09:13 [main] INFO  com.netflix.config.sources.URLConfigurationSource- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020/04/09-09:13 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2020/04/09-09:13 [main] INFO  org.springframework.cloud.commons.util.InetUtils- Cannot determine local hostname
+2020/04/09-09:13 [main] INFO  org.springframework.cloud.commons.util.InetUtils- Cannot determine local hostname
+2020/04/09-09:13 [main] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory- Setting initial instance status as: STARTING
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Initializing Eureka in region us-east-1
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using JSON encoding codec LegacyJacksonJson
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using JSON decoding codec LegacyJacksonJson
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using XML encoding codec XStreamXml
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using XML decoding codec XStreamXml
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Disable delta property : false
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Single vip registry refresh property : null
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Force full registry fetch : false
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Application is null : false
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Registered Applications size is zero : true
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Application version is -1: true
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Getting all instance registry info from the eureka server
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- The response status is 200
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Starting heartbeat executor: renew interval is: 30
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.InstanceInfoReplicator- InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Discovery Client initialized at timestamp 1586394788398 with initial instances count: 3
+2020/04/09-09:13 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry- Registering application ENTRANCE-GUARD-ADMIN with eureka with status UP
+2020/04/09-09:13 [main] INFO  com.netflix.discovery.DiscoveryClient- Saw local status change event StatusChangeEvent [timestamp=1586394788400, current=UP, previous=STARTING]
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Context refreshed
+2020/04/09-09:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient- DiscoveryClient_ENTRANCE-GUARD-ADMIN/localhost:entrance-guard-admin:10000: registering service...
+2020/04/09-09:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient- DiscoveryClient_ENTRANCE-GUARD-ADMIN/localhost:entrance-guard-admin:10000 - registration status: 204
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Found 1 custom documentation plugin(s)
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner- Scanning for api listing references
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: addUsingPOST_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchAddUsingPOST_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchDeleteUsingGET_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_2
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getByIdUsingGET_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getListUsingGET_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getPageUsingGET_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: updateUsingPUT_1
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: addUsingPOST_2
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchDeleteUsingGET_2
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_3
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: updateUsingPUT_2
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchDeleteUsingGET_3
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_4
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchDeleteUsingGET_4
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_5
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: addUsingPOST_3
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchDeleteUsingGET_5
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_6
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getByIdUsingGET_2
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getListUsingGET_2
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getPageUsingGET_2
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: updateUsingPUT_3
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchDeleteUsingGET_6
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_7
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: addUsingPOST_4
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: batchDeleteUsingGET_7
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: deleteUsingDELETE_8
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getByIdUsingGET_3
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getListUsingGET_3
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: getPageUsingGET_3
+2020/04/09-09:13 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator- Generating unique operation named: updateUsingPUT_4
+2020/04/09-09:13 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 10000 (http) with context path ''
+2020/04/09-09:13 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration- Updating port to 10000
+2020/04/09-09:13 [main] INFO  com.linktop.cloud.entranceguardadmin.EntranceGuardAdminApplication- Started EntranceGuardAdminApplication in 11.942 seconds (JVM running for 12.926)
+2020/04/09-09:13 [http-nio-10000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020/04/09-09:13 [http-nio-10000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2020/04/09-09:13 [http-nio-10000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 9 ms
+2020/04/09-09:18 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2020/04/09-09:23 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2020/04/09-09:28 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2020/04/09-09:33 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration

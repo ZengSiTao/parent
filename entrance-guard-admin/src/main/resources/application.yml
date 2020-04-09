@@ -1,0 +1,51 @@
+server:
+  port: 10000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://register-center-1:30000/eureka/,http://register-center-2:30001/eureka/
+spring:
+  application:
+    name: entrance-guard-admin
+  main:
+    allow-bean-definition-overriding: true
+
+  servlet:
+    multipart:
+      max-file-size: 4MB
+      max-request-size: 20MB
+
+#hystrix的超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+#ribbon的超时时间
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
+feign:
+  client:
+    config:
+      remote-service:
+        connectTimeout: 1000
+        readTimeout: 12000
+
+
+#文件
+cbs:
+    filePath:
+        file:./data/cloud/
+
+logging:
+  file: ./logs/admin.log
+  file.max-size: 100MB
+  pattern:
+    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+    file: "%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n"

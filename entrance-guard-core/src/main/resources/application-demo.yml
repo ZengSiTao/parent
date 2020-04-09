@@ -1,0 +1,113 @@
+server:
+  port: 11000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://register-center-1:30000/eureka/,http://register-center-2:30001/eureka/
+spring:
+  application:
+    name: entrance-guard-core
+  main:
+    allow-bean-definition-overriding: true
+  output:
+    ansi:
+      enabled: DETECT
+  servlet:
+    multipart:
+      max-file-size: 4MB
+      max-request-size: 20MB
+
+  datasource:
+    name: test
+    url: jdbc:mysql://49.235.35.76:3306/entranceguard
+    username: root
+    password: 123456 # 使用druid数据源
+    #type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+#datasource config
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://49.235.35.76:3306/blog?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8
+  username: root
+  password: 123456
+
+## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+#  mapper-locations: classpath:mapping/*.xml #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.linktop.cloud.entranceguardcore.dao # 注意：对应实体类的路径
+  configuration:
+    logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#文件
+cbs:
+    filePath:
+        file:./data/cloud/
+
+logging:
+  file: ./logs/core.log
+  file.max-size: 100MB
+  pattern:
+    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+  level:
+    root: ERROR
+    org:
+      springframework:
+        security: DEBUG
+        web: ERROR
+        hibernate: DEBUG
+      apache:
+        commons:
+          dbcp2: DEBUG
+    com:
+      linktop: INFO
+
+app:
+  key: "90001f44c50341a086f3c828dc80cf3d"
+  rsa_private_key_pkcs8: |
+                   MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwtM35908kpENH
+                   XekpiTuyfjC3VBel0U+9KHQbRbR0vy+jd423GtoV88HZfOGNH26qyH0HdUwCiJVt
+                   qIsx6sEXk2Jd35C/T4Vdz99Z+TuUdk+baXaAkc6DHmy3iDyapXyRiFpl315I9jxE
+                   /wq9vFCRF+KSv4TsNbowfIFxRghAmD80SNmb93AO53jntNsSw7YchNlVq58xJ8/6
+                   aXXv8FiAAyXcNPV6C7JNlTnYL8VSmg+SdudD+ft27wOM8OePQB4to1XW98ls0g7Y
+                   IlAs87ans8L641piuh3f7xUKLiEgAuytuPXGy/MnidXcrUj2CBfdeqKOWLG8LRKF
+                   Wxm/d6dTAgMBAAECggEBAIo8V2p2KwbKLgu1jsK8pePjzi6M7Zb9oLik3fe71wkB
+                   y73AuC+HJRbJQ1vl0vk4nrWh9BWSkGzm9qb7lDDvqjDMTsaLL8xJ5FZYWS0kyZRB
+                   3dMBdP/tkLWIZppJTMfaMBIVrkpFrJe9cba0Im391LU9DzWn989l1Is7y3OWyrvk
+                   UUJcL2dLnrtVSi0RjmryyseOe1jeIUVP8ls7r+HRLDBA2rNs2BdH1/XOBMYc6Vhv
+                   KP5/UR4m4rgB6ura3pSwPbLfIEpfWyaGnBYlEfJVYmSjQr35t/NVBQpRDejVTrQA
+                   foh4xZfcODEg7gU5hgCzbCEb3sJn8LxcG3PuzWl8OVkCgYEA4IQxh43T2Ct82/Nu
+                   0p2xFC4hLDa1meO3AasC2hNfWqVUAuB6sJmMmpaeDo/hKzEe/sj3oEGrbOa0YuUx
+                   HKFoIsj3Evpjc3az3p5aRGVhUQ3roniDPb7TxurD9vzw/HmrRllKWMMLNyL/MpS7
+                   xQEFVPh6VhlVGbAeUvOovpqOGRUCgYEAyXxMdcjglBf8SgtMgwoixvMXertq89Ln
+                   mjq9CrHX+x2kx+UJFIvkC54mKGkhHv64VLPI7hdsYyhNBzQFboF+3sLjBYWVXJ42
+                   bDN78CjnbwNOZ3Udsl5CPnQ7UcXHcGk/rKLwk+8JZriQNu0gymVh2Vi8NgkyIrBS
+                   cCLPU0SziMcCgYAZnHrZ77/exPc1UAuwUvTETI7UMFl++I8DzbJBljwmZv2yZlEY
+                   nCuB5vSYzKju+GeEwQAec99OSPMC5Qo5LeBnN22X6KA3p67VElNRwg7b5C6hFgZC
+                   oOYfpuA76JbE9kwndkAY6Ab7fy6FYpoY2wj0rHOoJrOifoi3BbyWIaNcEQKBgAhq
+                   IYNVxVNKASZSfHqIhNVMN7HPe/L83uFJDLYSoVOCdGxIu21ZPkfh7fQIF/MEbkxT
+                   SdPvtH4bo8PmP0fTLqo892A2qPs6PEmeiNGJ08iGGdMmR/w4BYo4LnYGzYJ7UsZx
+                   85wqAnmAwb0ZgCITw9dg5lNXZPmf5YF7Yq82kkznAoGAPblTJl7ZY+h4WnNXugNc
+                   aFeRHQRPmBUpg/pggGuXaVl8RN/zXZPQVnwbFCgjDVQfcPgcQ2iHpP6WzT4P9pxi
+                   6u5PduJ9AGe3hgGtMApy1Vp70tIGl5v+AGQbxDl/0xFU5HI52VZzGna8vcoNaiqG
+                   dTiW+aNmiP7ccb1QLeZeh3Q=
+longconn:
+  secret: "e0xEo_SI=zf(t:])"
+  secretB64: "ZTB4RW9fU0k9emYodDpdKQ=="
+  host: "218.5.96.6"
+  port: 9787
+

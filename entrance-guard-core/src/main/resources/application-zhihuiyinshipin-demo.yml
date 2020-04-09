@@ -1,0 +1,113 @@
+server:
+  port: 11000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://register-center-1:30000/eureka/,http://register-center-2:30001/eureka/
+spring:
+  application:
+    name: entrance-guard-core
+  main:
+    allow-bean-definition-overriding: true
+  output:
+    ansi:
+      enabled: DETECT
+  servlet:
+    multipart:
+      max-file-size: 4MB
+      max-request-size: 20MB
+
+  datasource:
+    name: test
+    url: jdbc:mysql://49.235.35.76:3306/entranceguard
+    username: root
+    password: 123456 # 使用druid数据源
+    #type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+#datasource config
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://49.235.35.76:3306/blog?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8
+  username: root
+  password: 123456
+
+## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+#  mapper-locations: classpath:mapping/*.xml #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.linktop.cloud.entranceguardcore.dao # 注意：对应实体类的路径
+  configuration:
+    logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#文件
+cbs:
+    filePath:
+        file:./data/cloud/
+
+logging:
+  file: ./logs/core.log
+  file.max-size: 100MB
+  pattern:
+    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+  level:
+    root: ERROR
+    org:
+      springframework:
+        security: DEBUG
+        web: ERROR
+        hibernate: DEBUG
+      apache:
+        commons:
+          dbcp2: DEBUG
+    com:
+      linktop: INFO
+
+app:
+  key: "9000fcd3d916458dba3ece0fe2ef0fe3"
+  rsa_private_key_pkcs8: |
+            MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDUJxvmUPGIFS/a
+            SqWHqn4AMP7WMjwvwoZoP3vdIxlhcFrrzQs3L/dU7t/so5+QjbVoQElzBXl98Pu5
+            YmZ8f/Ak4WK9gXbMd4A4L0hLioCVRog5H+hnRMzxE3TUUKdaA3rixAaUAgZTOuh8
+            zVVVcpPJN2PV20R7xOewBOoOqpy3kyDWasmMa7yQ+uH+1XgC8BaC/IcS2E2upR5b
+            +tpBOWY5ud+It4qnIy6hCK2t6C3MJn1pqPaa9ALYoKKE6fOZA9tZpLE4mnsvqLsm
+            LHru3wemz/44jPK0vTvPpRU8b3DilWqYg1YYAiLAlmUG25SG3Pdlv/1IgrmRZH2B
+            knSA8XgbAgMBAAECggEAQyoOfx/pF3f9qlIvjX/AXDcmtpE41LX071QJ1ryh8GMt
+            pbFId7RLzSvC4Jv8jDsQz2xq1GtLRz/fsZUhdRDb6hEgvXYbMigzA5aUgLXcd2XZ
+            ApzDas4xQ7ExL3ZJRQoNAXWlz33EmtzvdXNcLK0VdIKArNe6GqT/5I3pu7Lv4n2x
+            +lwtofjy7sN+9qCfWKXEzI+zRnU43AtW0ge8Pl2pKQRT95ZW59U8nZtvtPnx0cyW
+            TmkK6GF3NzCnNN+majpc5lcXXo0lduPPWiSa/5s1NNmTorEMq/kN9y/syLo9lLX7
+            xKlSi5tf61plC3mVUFNazJGOKYRWRYYT/RZx3845oQKBgQD3Nr7UbCfQiqi53Y0P
+            FVaZZgi9safzepQtCR90IhoAJMhIhGGRPbRWL2D+7Vbrx1A6nVA5yz1Iaw/7TtRM
+            dXRFkbJK2P1HDcpv93gCY41Yya8cYQXpGCzkgqjHEXAYxRzkBUlLvSTmH3f2qANb
+            Lyp9Ueef3IrVVWmmrgafzZF/HwKBgQDbsVz9r+dF5vN5Y93hFv5zEMFyif+l8kZO
+            +x+HaOI0mI2JchIuJQbAhX6nMikJaa/pVN5GDDelccMDofyjnJFSv9pX5HgW0MOE
+            HPAgPzyykIu6WvL7obmHHzYALisLIrUtEDoyw7fVDPp/FBcKxy4SCjd8bXesC9rw
+            Dn6RQVDzhQKBgQDJUnkHzuiBqVoMu0NTxEHY/MIjkVlALFQddO97iQX5lfrRK5W1
+            TTXedgkcsjX2H0PT6CbcWgoXPrEuLJ0xgvlkamlzEND6m11/312JPH9wjhagGtdQ
+            Y1Kz6T//ldDfKy8C9tcg6fDxwzDT2zGYgYmtsxTZGCar4zn99n0IiMVzawKBgGYk
+            Mj3oeLhxRiXcHp62WBsbYTVln6yB1dqGuwPz6afWfYe3t2go4tjDuDz3/0hXEOiF
+            AsrCh2SuXaLkv1c6Rf6ZIGTY3lSNPzm/Uo1LmWbT+YLtIieH64A9LJgs3upQere2
+            4bgUcvXlENngd04ViP/uLBn3szoUUPhnZMUX/xEZAoGAYF5nK3KeQEIFCoGYJD0i
+            czFZYYh6WOokYDTCMJh2xiOYvPx503N1/U06CsQA+EvRuIOUUfyo/qygFPfO/iJ7
+            H91IAoWHHsQl7Abxhp/RcISEcSuPrZ5iWkt8xteKbTuJ83/krRpQzCRHoJENIN5h
+            Y58ZfCbI/wGRf5nCb5YyaZY=
+longconn:
+  secret: 'Lt-&6`~P*Zh"v9d/'
+  secretB64: "THQtJjZgflAqWmgidjlkLw=="
+  host: "218.5.96.6"
+  port: 9787
+

@@ -1,0 +1,3 @@
+2020/04/09-09:11:32 [main] INFO  com.linktop.cloud.entranceguardcore.EntranceGuardCoreApplication- No active profile set, falling back to default profiles: default
+2020/04/09-09:11:41 [main] INFO  com.linktop.cloud.entranceguardcore.EntranceGuardCoreApplication- Started EntranceGuardCoreApplication in 13.211 seconds (JVM running for 15.348)
+2020/04/09-09:11:41 [main] INFO  com.linktop.cloud.entranceguardcore.misc.InitSpringBoot- springboot初始化完成

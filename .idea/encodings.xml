@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commonutils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commonutils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-longconn" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-longconn/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/entrance-guard-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jna-aes" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jna-aes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swagger2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swagger2/src/main/java" charset="UTF-8" />
+  </component>
+</project>

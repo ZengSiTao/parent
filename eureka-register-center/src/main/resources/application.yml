@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: register-center
+#  profiles:
+#    active: center1,center2
+
+
+server:
+  port: 30000
+
+eureka:
+  instance:
+    #    prefer-ip-address: false
+    hostname: register-center-1
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://register-center-2:30001/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    # 测试时关闭自我保护机制，保证不可用服务及时踢出 默认打开状态，建议生产环境打开此配置
+    enable-self-preservation: true #（设为false，关闭自我保护主要）
+    eviction-interval-timer-in-ms: 4000 #清理间隔（单位毫秒，默认是60*1000）
+    peer-node-read-timeout-ms: 10000
+---
+spring:
+  profiles: register-center-2
+server:
+  port: 30001
+
+eureka:
+  instance:
+    #    prefer-ip-address: false
+    hostname: register-center-2
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://register-center-1:30000/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    # 测试时关闭自我保护机制，保证不可用服务及时踢出 默认打开状态，建议生产环境打开此配置
+    enable-self-preservation: true #（设为false，关闭自我保护主要）
+    eviction-interval-timer-in-ms: 4000 #清理间隔（单位毫秒，默认是60*1000）
+    peer-node-read-timeout-ms: 10000

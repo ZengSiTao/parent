@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/commonutils/common-utils.iml" filepath="$PROJECT_DIR$/commonutils/common-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entrance-guard-admin/entrance-guard-admin.iml" filepath="$PROJECT_DIR$/entrance-guard-admin/entrance-guard-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entrance-guard-client/entrance-guard-client.iml" filepath="$PROJECT_DIR$/entrance-guard-client/entrance-guard-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entrance-guard-core/entrance-guard-core.iml" filepath="$PROJECT_DIR$/entrance-guard-core/entrance-guard-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entrance-guard-longconn/entrance-guard-longconn.iml" filepath="$PROJECT_DIR$/entrance-guard-longconn/entrance-guard-longconn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entrance-guard-model/entrance-guard-model.iml" filepath="$PROJECT_DIR$/entrance-guard-model/entrance-guard-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-register-center/eureka-register-center.iml" filepath="$PROJECT_DIR$/eureka-register-center/eureka-register-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jna-aes/jna-aes.iml" filepath="$PROJECT_DIR$/jna-aes/jna-aes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent.iml" filepath="$PROJECT_DIR$/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swagger2/swagger2.iml" filepath="$PROJECT_DIR$/swagger2/swagger2.iml" />
+    </modules>
+  </component>
+</project>
